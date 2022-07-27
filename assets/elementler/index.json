@@ -1,0 +1,42 @@
+{
+    "ates": {
+        "adi": "Ateş",
+        "kisa": "ates",
+        "burc": [
+            "aslan",
+            "koc",
+            "yay"
+        ],
+        "aciklama": "Ateş elementi burçlar kuşağında Koç, Aslan ve Yay burçlarını kapsar. Ateş grupları doğal bir liderlik yeteneği taşırlar. Oldukça enerjik ve yaşam doludurlar. Kişilik olarak dışadönük ve sıcak mizaçlıdırlar. Çabuk heyecanlanır, yeni bir şeye başlamak konusunda heveslidir. Rutin işler spontanlığı engellediği için ona göre değildir. Ateş grupları hayata karşı bir çocuk gibi coşkuludur ve spontan, içinden geldiği gibi davranmayı tercih eder. Bunun sebebi ondaki baskın ateş enerjisinin, içinde yoğun bir enerji birikimi oluşturmasıdır. Bu sebeple bir hedefi yada arzusu varsa hemen harekete geçer. Böylece enerjisini harekete dökerek boşaltır. Bağımsızlığına çok düşkün ve ona ne yapacağının söylenmesinden pek hoşlanmayan kişilerdir. Yaratıcılığı, liderlik kapasitesi ile çevrelerinde en çok dikkat çekenler, Ateş elementi baskın kişilerdir."
+    },
+    "hava": {
+        "adi": "Hava",
+        "kisa": "hava",
+        "burc": [
+            "ikizler",
+            "kova",
+            "terazi"
+        ],
+        "aciklama": "Hava elementi burçlar İkizler, Terazi ve Kova burçlarıdır. İnsan ilişkilerinde, iletişimde güçlü kişilerdir. Hava burçları zihinsel olarak çok canlı ve yaratıcıdır. Çabuk kavrayan, sözel yeteneği gelişmiş ve kendini ifade etmek konusunda başarılı kişilerdir. Doğal olarak dışadönük ve sosyaldirler. Geniş bir arkadaş çevreleri vardır. Hava insanı değişim ve yeniliğe, yeni şeyler öğrenmeye çok isteklidir. Bu sebeple herşeye tıpkı hava gibi her şeye nüfuz ederler ancak bağlanmayı sevmezler ve mesafelerini korurlar. Zeki, soyut fikirleri kavrayan, çevresine bilgi aktaran, yenilikçi kişilerdir. Sosyal çevrelerine karşı duyarlı duyarlı bir yapıları vardır. Okumayı, araştırmayı seven entelektüel kişilerdir. Ancak bazen soyut fikirlerin ve kendi düşünce dünyalarından aldıkları zevkin içinde kaybolup, gerçeklerden kopma eğilimi gösterebilirler."
+    },
+    "su": {
+        "adi": "Su",
+        "kisa": "su",
+        "burc": [
+            "akrep",
+            "balik",
+            "yengec"
+        ],
+        "aciklama": "Su elentine mensup burçlar Yengeç, Akrep ve Balık’tır. Su grubunun karakteristik özelliği, sezgi gücü ve duygusallığıdır. Empati yetenekleri çok gelişmiştir ve bu şekilde çevrelerine ve bulundukları ortama tıpkı su gibi uyumlanırlar. Çevrelerindeki enerjileri tıpkı anten gibi algılar ve çekerler. Bazen bu özellikleri, olumsuzluklardan etkilenmelerine sebep olabilir. Duyarlılık, hayalgücü, yaratıcılık ve sanatsal yeteneklere sahip kişilerdir. Genel olarak çevrelerine karşı korumacı, şefkatli yapıdadırlar. Çok duyarlı oldukları için harekete geçmekte çok atik değildirler. Dikkati daha çok hissettiklerindedir. Diğer insanları dinleyen, onların içinde oldukları ruh durumunu anlayan ve yardımcı olmak isteyen yapıları, onlara doğal olarak bir iyileştirme gücü ve yönelimi verir. Su grubu kişiler harekete geçmek, akmak için bir itici güce ihtiyaç duyarlar. Derinliği olan, içe dönük, sakin yapıda kişilerdir."
+    },
+    "toprak": {
+        "adi": "Toprak",
+        "kisa": "toprak",
+        "burc": [
+            "basak",
+            "boga",
+            "oglak"
+        ],
+        "aciklama": "Toprak elementi burçlar kuşağında Boğa, Başak ve Oğlak burçlarıdır. Toprak burçları pratik, maddeci, ayakları yere basan kişilerdir. Bu element grubu sakin ve sabırlı yapıdadır. Hayalci olmaktan ziyade, elle tutulan, gözle görülen somut şeylere itibar ederler. Hayata ve düzene sıkı sıkı bağıdırlar. Bu sayede iş ve kariyer konusunda sebat ve çalışkanlıkları ile yükselebilirler. Toprak grubu ‘kök’leri hep güçlü olsun ister bu sebeple risk almaz, somut değerlere göre hareket eder. Hareket ve adımlarını önceden planlar ve zor koşullara oldukça dayanıklıdır. Güvenlik onun için önceliklidir, kendini güven içinde hissetme ihtiyacı sebebiyle, kişilere, evine, mal, mülk ve toprağına bağlıdır. Sürekli değişen koşullar onu rahatsız eder, hayatın rutin akışına uyum sağlamayı tercih eder. Yeniliklerden çok hoşlanmayan daha içe kapalı kişilerdir. Genel olarak koruyucu, sevdiklerini gözeten, kol kanat geren kişilerdir."
+    }
+}

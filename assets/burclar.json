@@ -1,0 +1,122 @@
+{
+    "akrep": {
+        "elemet": "su",
+        "gezegen": "mars",
+        "tr": {
+            "name": "Akrep",
+            "elemet": "Su",
+            "gezegen": "Mars",
+            "tarih": "24 Ekim – 22 Kasım"
+        }
+    },
+    "aslan": {
+        "elemet": "ates",
+        "gezegen": "gunes",
+        "tr": {
+            "name": "Aslan",
+            "elemet": "Ateş",
+            "gezegen": "Güneş",
+            "tarih": "23 Temmuz – 23 Ağustos"
+        }
+    },
+    "balik": {
+        "elemet": "su",
+        "gezegen": "neptun",
+        "tr": {
+            "name": "Balık",
+            "elemet": "Su",
+            "gezegen": "Neptün",
+            "tarih": "20 Şubat – 20 Mart"
+        }
+    },
+    "basak": {
+        "elemet": "toprak",
+        "gezegen": "merkur",
+        "tr": {
+            "name": "Başak",
+            "elemet": "Toprak",
+            "gezegen": "Merkür",
+            "tarih": "24 Ağustos – 23 Eylül"
+        }
+    },
+    "boga": {
+        "elemet": "toprak",
+        "gezegen": "venus",
+        "tr": {
+            "name": "Boğa",
+            "elemet": "Toprak",
+            "gezegen": "Venüs",
+            "tarih": "21 Nisan – 20 Mayıs"
+        }
+    },
+    "ikizler": {
+        "elemet": "hava",
+        "gezegen": "merkur",
+        "tr": {
+            "name": "İkizler",
+            "elemet": "Hava",
+            "gezegen": "Merkür",
+            "tarih": "21 Mayıs – 21 Haziran"
+        }
+    },
+    "koc": {
+        "elemet": "ates",
+        "gezegen": "mars",
+        "tr": {
+            "name": "Koç",
+            "elemet": "Ateş",
+            "gezegen": "Mars",
+            "tarih": "21 Mart- 20 Nisan"
+        }
+    },
+    "kova": {
+        "elemet": "hava",
+        "gezegen": "uranus",
+        "tr": {
+            "name": "Kova",
+            "elemet": "Hava",
+            "gezegen": "Uranüs",
+            "tarih": "21 Ocak – 19 Şubat"
+        }
+    },
+    "oglak": {
+        "elemet": "toprak",
+        "gezegen": "saturn",
+        "tr": {
+            "name": "Oğlak",
+            "elemet": "Toprak",
+            "gezegen": "Satürn",
+            "tarih": "22 Aralık – 20 Ocak"
+        }
+    },
+    "terazi": {
+        "elemet": "hava",
+        "gezegen": "venus",
+        "tr": {
+            "name": "Terazi",
+            "elemet": "Hava",
+            "gezegen": "Venüs",
+            "tarih": "24 Eylül – 23 Ekim"
+        }
+    },
+    "yay": {
+        "elemet": "ates",
+        "gezegen": "jupiter",
+        "tr": {
+            "name": "Yay",
+            "elemet": "Ateş",
+            "gezegen": "Jüpiter",
+            "tarih": "23 Kasım – 21 Aralık"
+        }
+    },
+    "yengec": {
+        "elemet": "su",
+        "gezegen": "ay",
+        "tr": {
+            "name": "Yengeç",
+            "elemet": "Su",
+            "gezegen": "Ay",
+            "tarih": "22 Haziran – 22 Temmuz"
+        }
+    }
+}

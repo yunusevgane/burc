@@ -1,0 +1,87 @@
+{
+    "ay": {
+        "adi": "AY",
+        "kisa": "ay",
+        "burc": [
+            "yengec"
+        ],
+        "aciklama": "   Kişinin ruh hali ve duygu dünyasıyla ilgili bilgiler verir. Korunma ve güven duygusunun kaynağı, ihtiyaçlar, alışkanlıklar, güdüsel davranışlar ve tepki gösterme tarzını anlatır. Ayrıca evdeki psikolojik atmosfer, yuva-ev-yerleşimle ilgili konular, bilinçaltı, geçmişten gelenler, anılar, aile kökleriyle ilgili bilgileri gösterir. Dişil enerji, kişinin yaşamındaki anne figürü ve ondan öğrenilen doğrulardır. Anneyle ilişkiler, bir kadının nasıl bir anne olduğu, kadın figürler, erkekler için eş hakkında bilgiler verir. Beslenme alışkanlıkları da Ay ile anlatılır. Ayrıca mitolojide Artemis’le anlatılır. Vücuttaki sıvılar, hormonlar, mide ve sindirim sistemi, kadında üreme organları ile doğurganlık kapasitesini anlatır. Ay’ın bulunduğu burç, ev ve açılar kişinin duygu dünyasıyla ilgili açıklayıcı bilgiler verir.<br><br>Ay Yengeç’i yönetir, Boğa’da yücelir, Oğlak’ta zararlı ve Akrep’te düşer."
+    },
+    "gunes": {
+        "adi": "GÜNEŞ",
+        "kisa": "gunes",
+        "burc": [
+            "aslan"
+        ],
+        "aciklama": "   Kişiliğin özü, yaşam enerjisi ve yaratıcı kapasite ile bilgi verir. Ego, bilinç, hayattaki niyet, amaç, ulaşılmak istenen hedeftir.  Hayatta gidilen yönü anlatır. Canlılığımızın sebebi, “olmak” için benimsediğimiz yol, güç ve tamamlanma duygusu veren kaynağı gösterir. Ayrıca kahramanımızdır ve baba başta olmak üzere hayatımızdaki otorite figürleridir. Kadın haritasında eşle ilgili bilgi verir. Eril prensiptir, vücutta kalbe karşılık gelir. Mitolojide Apollo’dur. Astrolojik haritada Güneş’in bulunduğu burç, ev ve aldığı açılar kişinin öz güveni ve kendine duyduğu saygı ile ilgili önemli bilgiler verir. <br><br> Güneş Aslan’ı yönetir, Koç’ta yücelir, Kova’da zararlı ve Terazi’de düşer."
+    },
+    "jupiter": {
+        "adi": "JÜPİTER",
+        "kisa": "jupiter",
+        "burc": [
+            "yay",
+            "balik"
+        ],
+        "aciklama": "   Kişinin yaşamın içinde hangi alanda nasıl bir gelişme, ilerleme ve büyüme kaydedeceğini anlatır. Hayatta şans faktörünün nerede bulunduğunu gösterir. Bireyin iyimser yaklaştığı, pozitif bakışla risk aldığı ve özgürlüğünü kazandığı konuları anlatır. İnanç ve güvenle birlikte sınırsızlık duygusunu yaşadığı ve bilgeleştiği alandır. Jüpiter kişinin hayat görüşünü, inanç sistemini anlatır. Cömertlik, zenginlik ve abartıya kaçmak da Jüpiter’le ilişkilendirilir. Mitolojide Zeus olarak karşımıza çıkar. Büyük iyiliktir. Kişiyi geliştiren manevi ve fiziksel anlamda uzun keşif yolculuklarını ve yükseköğrenimi anlatır. Medya ve bir görüşü başkalarına yaymakla ilişkilidir. Hukuku da anlatır. Jüpiter’in bulunduğu, ev, burç ve açılar kişinin gelişme potansiyelini anlatır İnsan vücudunda detoks vazifesi gören karaciğer, pankreas, siyatik sinirleri, kalçalar ve uylukları temsil eder.<br><br>Jüpiter Yay ve Balık’ta yönetici, İkizler ve Başak’ta zararlıdır."
+    },
+    "mars": {
+        "adi": "MARS",
+        "kisa": "mars",
+        "burc": [
+            "akrep",
+            "koc"
+        ],
+        "aciklama": "   Kişinin enerjisini nereden aldığını, kendini ortaya koyuş tarzını ve hayatta kalma becerisini anlatır. Fiziksel ve psikolojik savaşma ve savunma kapasitesi Mars’la ilişkilidir. Bireyin hayatta hangi alanda efor sarf ettiğini, motivasyon kaynaklarını, cesaretini anlatır. Kötücül- malefik-doğaya sahiptir. Kızgınlıklar, hırs, öfke, şiddet ve suça eğilim Mars’la anlatılır. Eril enerjiyi ve cinselliğe yaklaşımı anlatır. Erkek haritasında bu enerjiyi nasıl kullandığını, kadın haritasındaysa ne tip erkek figürlere çekim hissettiğini, eşini anlatır. Ayrıca ameliyatlar, kazalar, yanma, ısırık ve yaralanmaları anlatır. Kişinin hayatla nasıl bir mücadele içinde olduğunu Mars’ın bulunduğu, ev, burç ve açılarla anlamak mümkündür. Mitolojide Ares olarak geçer. Vücutta kafa bölgesini, kasları ve alyuvarları sembolize eder. Ayrıca erkeklik organıdır. Koku ve tat alma duyusunu gösterir.<br><br>Mars Koç ve Akrep burçlarını yönetir, Oğlak’ta yücelir, Terazi ve Boğa’da zararlı, Yengeç’te düşüktür."
+    },
+    "merkur": {
+        "adi": "MERKÜR",
+        "kisa": "merkur",
+        "burc": [
+            "basak",
+            "ikizler"
+        ],
+        "aciklama": "   Kişinin zihninin nasıl çalıştığını, iletişimi kurma şeklini, dili kullanma ve dil öğrenme becerisini anlatır. Bireyin algısının nasıl çalıştığını, bilgiyi alma, aldığı bilgiyi işleme şekli ve bunu başkalarına nasıl aktardığını gösterir. Zihinsel faaliyetler, eğitim hayatı, kardeşler Merkür’le gösterilir. Ayrıca kişinin ikna kabiliyeti ve pazarlık yeteneğini anlatır. Kısa yolculukları nereye nasıl neden yaptığını ve ticari faaliyetlerini gösterir. Merkür’ü mitolojide Hermes anlatır. Vücutta sinir sistemini, akciğerler ve bütün solunum sistemini,  eller, kollar ve hatta kişiyi bir yerden bir yere götüren bacakları anlatır.  Merkür’ün bulunduğu burç, ev ve açıları zihnin çalışma prensibi, becerikli ve pratik olup olmadığı hakkında bilgiler verir.<br><br>Merkür İkizler ve Başak’ta yönetir, Başak’ta ayrıca yücelir, Yay ve Balık’ta zararlıdır."
+    },
+    "neptun": {
+        "adi": "NEPTÜN",
+        "kisa": "neptun",
+        "burc": [
+            "balik"
+        ],
+        "aciklama": "   Kişinin yaşamında nerelerde ilham, içgüdü, duyarlılık ve hassasiyet kullandığını anlatır. Nerelerde fedakârlık edildiği ve gerçekçi olunamadığını göstermektedir. Neptün’ün bulunduğu yer ve açıları idealize ettiğimiz, fantezi kurduğumuz, özlemini çektiğimiz ya da kafamızın karıştığı alanları gösterir. Neptün’ün bulunduğu yaşam alanında yanılabilir ya da başkalarını da yanıltabiliriz. Büyülenme, merhamet, fedakârlık bazen kendini adama, egodan arınma ve evrenle bütünleşme yine buradadır. Ayrıca kayıplar, belirsizlikler, bağımlılıklar, aldanmalar, çözülmeler, sınır koyamama, kaçışlar ve kararsızlıklar Neptün’le anlatılır. Evrenle bütünleşme duygusunu anlatır. Hayaller, rüyalar ve üst seviyede ruhaniyet Neptün ile anlaşılır. Mitolojide denizlerin Tanrısı Poseidon’dur.<br><br>Vücutta; ayakları temsil eder."
+    },
+    "pluton": {
+        "adi": "PLÜTON",
+        "kisa": "pluton",
+        "burc": [
+            "akrep"
+        ],
+        "aciklama": "   Kişinin yaşamında nerede büyük güç elde etmeye çalıştığını, hırsını, büyük mücadelelerle büyük dönüşümler gerçekleştirdiğini anlatır. Şehvet, tutku ve ihtiras Plüto ile ilişkilidir. Ölüm ve doğum temalarını anlatır. Bu fiziksel ölüm de olabilir, bir duygunun ölmesi, bir devrin kapanması gibi bir ölüm de olabilir. Geriye dönüşü mümkün olmayan olayları gösterir. Haritada yerleşimi ve açıları kişinin yaşamında neyi yıkıp, iyileştirmiş olarak yeniden ortaya çıkarttığını anlatır. Gücü tek başına elde tutmak için, uğruna acı çekmeyi göze aldığımız konuları anlatır. Bir anlamda ölüm ve yeniden doğuşa karşılık gelir.  Burada diktatörce tavırlar ortaya çıkabilir. Ayrıca yasak ve tabulara işaret eder. İflaslar, yıkımlar, kötü muameleye maruz kalınan ve utandıran durumlar Plüto’yla anlatılır. Üzerine örtü çekilmeye çalışılan, bilinçaltına atılan konular ile mafya faaliyetlerini de anlatır.<br><br>Plüton’un bulunduğu ev ve açıları yıkıcı gücün nerelerde ve ne şekilde karşımıza çıkacağını gösterir. Mitolojide yeraltı tanrısı Hades ile anlatılır.<br><br>Vücutta; cinsel organlar ve boşaltım sistemine karşılık gelir."
+    },
+    "saturn": {
+        "adi": "SATÜRN",
+        "kisa": "saturn",
+        "burc": [
+            "oglak",
+            "kova"
+        ],
+        "aciklama": "   Kişinin yaşamında hangi konularda ciddi emek sarf ettiğini, engellerle yüzleşebileceğini ve gerçekçi olmaya çalıştığını anlatır. Kısıtlanma endişesiyle korku geliştirilen alandır. Disiplinli olma gereği bulunan konulardır. Haritada acı veren, güvensizlik duyduğumuz, endişe taşıdığımız konuları gösterir. Aynı zamanda bireyin savunma geliştirdiği konulardır. Tedbirli davranmak zorunda hissedilen hatta kötümser bir bakış açısına sahip olunan konuları işaret eder. Gecikmeler, hayal kırıklıkları ve depresyonun kaynağı olabilir. Kişinin yaşamındaki otoritelerle, devletle ve baba figürüyle ilişkisini anlatır. Karmanın gezegenidir, zaman içerisinde kazanılan olgunluk, tecrübe ve bilgelik Satürn ile gerçekleşir. Bireyin kariyer yaşamıyla ilgili bilgi verir. İlgili konuda birey otorite olabilir. Astrolojik haritada Satürn’ün bulunduğu, ev, burç ve açılar kişinin kendi öz disiplini, öz saygısı ve otoritesi konusunda açıklayıcıdır. Mitolojide zaman tanrısı Kronos olarak ifade edilir.<br><br>Vücutta kemikler, iskelet sistemi ve deriyi anlatır."
+    },
+    "uranus": {
+        "adi": "URANÜS",
+        "kisa": "uranus",
+        "burc": [
+            "kova"
+        ],
+        "aciklama": "   Kişinin yaşamında hızlı, beklenmedik, ani ve sürpriz niteliğindeki gelişmeleri anlatır. Uyandıran bir enerjidir. Bireyin haritasında yerleşimi özgürlük ve aydınlanma yaşadığı konuları gösterir. Uranüs’le ilgili tanımlayıcı ifadeler sıra dışı, bağımsız, kaotik, meydan okuyan, herhangi sınıfa, gruba, oluşuma ait olmayan, orijinal, yaratıcı, tuhaf, alışılmamış, acayip, entelektüel, reformist olabilir. Kırılma, bozulma ve kopmalar da Uranüs’le anlatılır. Sınırları aşmakla ilişkilidir. Kişi hangi yaşamın hangi alanlarında farklılaşma ihtiyacı gösterir ve nerede özgün fikirlerini, heyecanını, hevesini ortaya koyar? Bunları astroloji haritasında Uranüs’ün bulunduğu, ev ve açıları anlatır. Mitolojide; gök tanrısı Uranos, diğer tanrıları yaratan tanrıdır.<br><br>Vücutta, sinir sistemini, herhangi bir anormal yapı ve sıra dışı olanı, ayrıca çarpıklık ve bozuklukları anlatır."
+    },
+    "venus": {
+        "adi": "VENÜS",
+        "kisa": "venus",
+        "burc": [
+            "terazi",
+            "boga"
+        ],
+        "aciklama": "   Kişinin ilişkilerini, sevgiyi verme ve alma şeklini, bağ kurma kapasitesini, zevklerini, estetik duygusunu,  hayatta nelerden mutlu olduğu gösterir. Karşı cinsle kurulan duygusal ilişkiler, kişinin başkalarını nasıl cezbettiği ve sempati toplama yolu, aşka ve evliliğe yaklaşımı Venüs’le anlatılır. Dişiliğin prensibidir. Pasif enerjidir. Kadın haritasında dişiliği nasıl yaşadığı, erkek haritasında ise ne tip dişi figürlere çekim hissettiğini gösterir. Ayrıca kişinin sosyal hayatın içindeki durumu, ilişkileri ve sosyalleşme kapasitesini gösterir.  Venüs bir ayna gibi çalışır, kişi başkalarına nasıl yaklaşıyorsa aldığı karşılık da aynısıdır. Ayrıca kişinin değerlerini ve değer yargılarını gösterir. Bireyin kendi kendine biçtiği değer ve maddi kaynakları, parayla ilişkisi de Venüs’le anlatılır. Mitolojide Afrodit, vücutta toplardamarlar, böbrekler, bel bölgesi, boğaz, tiroid bezesi ve kadın cinsel organı ile ilişkilidir. Venüs’ün bulunduğu burç, ev ve açıları kişinin kendiyle ve etrafındakilerle barış içinde olup olmadığına dair önemli bilgiler verir.<br><br>Venüs Boğa ve Terazi’yi yönetir, Balık’ta yücelir Akrep ve Koç’ta zararlı, Başak’ta düşüktür."
+    }
+}

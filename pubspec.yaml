@@ -1,0 +1,89 @@
+name: burc
+description: A new Flutter project.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.3 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.5
+  package_info_plus: ^1.4.2
+  animate_do: ^2.1.0
+  page_transition: ^2.0.9
+  provider: ^6.0.3
+  shared_preferences: ^2.0.15
+  firebase_core: ^1.18.0
+  firebase_messaging: ^11.4.2
+  flutter_widget_from_html_core: ^0.8.5+3
+  intl: ^0.17.0
+  datetime_picker_formfield: ^2.0.0
+  date_time_picker: ^2.1.0
+  flutter_native_splash: ^2.2.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.1
+  change_app_package_name: ^1.1.0
+  flutter_launcher_icons: ^0.9.3
+  flutter_app_name: ^0.1.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/burc/
+    - assets/elementler/
+    - assets/gezegenler/
+
+flutter_native_splash:
+  background_image: assets/bg.png
+  image: assets/zodcom.png
+  # branding: assets/zodcom.png
+  android_12:
+    image: assets/zodcom.png
+    background_image: assets/bg.png
+
+#flutter pub run flutter_native_splash:create
+
+flutter_app_name:
+  name: "Yay Burcu"
+
+flutter_icons:
+  android: "logoicon"
+  ios: true
+  image_path: "assets/burc/yay.jpg"
+
+  # flutter pub run change_app_package_name:main com.zodcomburclar.yay
+  # flutter pub run flutter_app_name
+  # flutter pub run flutter_launcher_icons:main
+  # flutterfire configure
+  # flutter build appbundle --build-name=1.1.0 --build-number=1
+
+
+
+
+
+  # sh1 alma
+  # gradlew signingReport
+  # keytool -list -v -keystore "C:\Users\yunus\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+
+  #firebase
+  #flutter pub add firebase_core
+  #dart pub global activate flutterfire_cli
+  #flutterfire configure
+  #flutter run -v
+
+#-------------------------
+# flutter build apk --split-per-abi
+
+#-------------------------
+# flutter upgrade .
+# dart migrate.
+# flutter pub outdated --mode=null-safety
+# flutter pub upgrade --null-safety
+# dart migrate
