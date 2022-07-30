@@ -1,7 +1,8 @@
+import 'package:burc/yukselensec.dart';
+
 import 'dil.dart';
 import 'ozellikler.dart';
 import 'state_data.dart';
-import 'yukselen.dart';
 import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'dart:convert';
@@ -277,7 +278,7 @@ class _anasayfaState extends State<anasayfa>
                       context,
                       PageTransition(
                           type: PageTransitionType.rightToLeft,
-                          child: yukselen(
+                          child: yukselensec(
                             burc: packageName,
                           )),
                     );
@@ -771,7 +772,7 @@ class _anasayfaState extends State<anasayfa>
                       context,
                       PageTransition(
                         type: PageTransitionType.rightToLeft,
-                        child: yukselen(
+                        child: yukselensec(
                           burc: burc,
                         ),
                       ),
