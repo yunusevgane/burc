@@ -68,10 +68,6 @@ flutter_icons:
   # flutterfire configure
   # flutter build appbundle --build-name=1.1.0 --build-number=1
 
-
-
-
-
   # sh1 alma
   # gradlew signingReport
   # keytool -list -v -keystore "C:\Users\yunus\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
@@ -81,7 +77,6 @@ flutter_icons:
   #dart pub global activate flutterfire_cli
   #flutterfire configure
   #flutter run -v
-
 #-------------------------
 # flutter build apk --split-per-abi
 
