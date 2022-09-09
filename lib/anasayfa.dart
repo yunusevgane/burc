@@ -1,12 +1,12 @@
 import 'package:burc/yukselensec.dart';
 
-import 'dil.dart';
 import 'ozellikler.dart';
 import 'state_data.dart';
 import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'dart:convert';
 import 'dart:async';
+// ignore: library_prefixes
 import 'package:flutter/services.dart' as rootBundle;
 import 'package:animate_do/animate_do.dart';
 import 'package:page_transition/page_transition.dart';
@@ -15,7 +15,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:intl/intl.dart';
 
 import 'ayarlar.dart';
-import 'burchesapla.dart';
 import 'elementler/elementler.dart';
 import 'elementler/elementlerdetay.dart';
 import 'gezegenler/gezegendetay.dart';

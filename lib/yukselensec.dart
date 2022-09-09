@@ -1,18 +1,15 @@
 import 'package:burc/state_data.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+// ignore: library_prefixes
 import 'package:flutter/services.dart' as rootBundle;
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart';
 import 'dart:convert';
-import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
-
 import 'package:flutter_time_picker_spinner/flutter_time_picker_spinner.dart';
 
-import 'package:shared_preferences/shared_preferences.dart';
 
-import 'anasayfa.dart';
 
+// ignore: camel_case_types
 class yukselensec extends StatefulWidget {
   String burc;
 
@@ -22,6 +19,7 @@ class yukselensec extends StatefulWidget {
   }) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _yukselensecState createState() => _yukselensecState();
 }
 
@@ -46,10 +44,7 @@ class _yukselensecState extends State<yukselensec> {
     var list = json.decode(jsondata) as List<dynamic>;
 
     for (int i = 0; i < list.length; i++) {
-      print("xxxxxxxxxxxx");
       print(list[i]["min"]);
-      print("xxxxxxxxxxxx");
-
       if (list[i]["min"] != null) {
         if (saat >= list[i]["min"] && saat <= list[i]["max"]) {
           yuk = list[i][widget.burc].toString();

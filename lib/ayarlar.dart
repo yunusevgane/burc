@@ -2,13 +2,16 @@ import 'state_data.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+// ignore: camel_case_types
 class ayarlar extends StatefulWidget {
   const ayarlar({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _ayarlarState createState() => _ayarlarState();
 }
 
+// ignore: camel_case_types
 class _ayarlarState extends State<ayarlar> {
   @override
   void initState() {
@@ -51,8 +54,8 @@ class _ayarlarState extends State<ayarlar> {
                                             .dil["burclistesi"][i]["adi"],
                                         style: TextStyle(color: Colors.white)),
                                   ),
-                                  Spacer(),
-                                  Icon(
+                                  const Spacer(),
+                                  const Icon(
                                     color: Colors.white,
                                     Icons.keyboard_arrow_right_outlined,
                                     size: 24.0,
@@ -79,7 +82,7 @@ class _ayarlarState extends State<ayarlar> {
                       style: TextStyle(
                           fontWeight: FontWeight.w600, letterSpacing: 0.6),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     Icon(
@@ -120,7 +123,7 @@ class _ayarlarState extends State<ayarlar> {
                                         style: TextStyle(color: Colors.white)),
                                   ),
                                   Spacer(),
-                                  Icon(
+                                  const Icon(
                                     color: Colors.white,
                                     Icons.keyboard_arrow_right_outlined,
                                     size: 24.0,
@@ -135,7 +138,7 @@ class _ayarlarState extends State<ayarlar> {
               child: Container(
                 padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
                 child: Row(
-                  children: [
+                  children: const [
                     Text(
                       'Yükseliniz Seçin',
                       style: TextStyle(
@@ -143,7 +146,7 @@ class _ayarlarState extends State<ayarlar> {
                     ),
                     Spacer(),
                     Text("Başak"),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     Icon(
@@ -183,8 +186,8 @@ class _ayarlarState extends State<ayarlar> {
                                             .dil["burclistesi"][i]["adi"],
                                         style: TextStyle(color: Colors.white)),
                                   ),
-                                  Spacer(),
-                                  Icon(
+                                  const Spacer(),
+                                  const Icon(
                                     color: Colors.white,
                                     Icons.keyboard_arrow_right_outlined,
                                     size: 24.0,
@@ -199,7 +202,7 @@ class _ayarlarState extends State<ayarlar> {
               child: Container(
                 padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
                 child: Row(
-                  children: [
+                  children: const [
                     Text(
                       'Hissettiğiniz Cinsiyet',
                       style: TextStyle(
@@ -207,7 +210,7 @@ class _ayarlarState extends State<ayarlar> {
                     ),
                     Spacer(),
                     Text("Erkek"),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     Icon(
@@ -233,9 +236,9 @@ class _ayarlarState extends State<ayarlar> {
                         children: <Widget>[
                           Card(
                             child: Row(
-                              children: [
+                              children: const [
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: Text("Türkçe",
                                       style: TextStyle(color: Colors.white)),
                                 ),
@@ -250,9 +253,9 @@ class _ayarlarState extends State<ayarlar> {
                           ),
                           Card(
                             child: Row(
-                              children: [
+                              children: const [
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: Text("İngilizce",
                                       style: TextStyle(color: Colors.white)),
                                 ),
@@ -267,9 +270,9 @@ class _ayarlarState extends State<ayarlar> {
                           ),
                           Card(
                             child: Row(
-                              children: [
+                              children: const [
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: Text("Almanca",
                                       style: TextStyle(color: Colors.white)),
                                 ),
@@ -284,9 +287,9 @@ class _ayarlarState extends State<ayarlar> {
                           ),
                           Card(
                             child: Row(
-                              children: [
+                              children: const [
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: Text("Fransızca",
                                       style: TextStyle(color: Colors.white)),
                                 ),
@@ -301,9 +304,9 @@ class _ayarlarState extends State<ayarlar> {
                           ),
                           Card(
                             child: Row(
-                              children: [
+                              children: const [
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: Text("İtalyanca",
                                       style: TextStyle(color: Colors.white)),
                                 ),
@@ -318,9 +321,9 @@ class _ayarlarState extends State<ayarlar> {
                           ),
                           Card(
                             child: Row(
-                              children: [
+                              children: const [
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: Text("Arapça",
                                       style: TextStyle(color: Colors.white)),
                                 ),
@@ -335,9 +338,9 @@ class _ayarlarState extends State<ayarlar> {
                           ),
                           Card(
                             child: Row(
-                              children: [
+                              children: const [
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: Text("Rusya",
                                       style: TextStyle(color: Colors.white)),
                                 ),
@@ -357,7 +360,7 @@ class _ayarlarState extends State<ayarlar> {
               child: Container(
                 padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
                 child: Row(
-                  children: [
+                  children: const [
                     Text(
                       'Dil',
                       style: TextStyle(
@@ -365,7 +368,7 @@ class _ayarlarState extends State<ayarlar> {
                     ),
                     Spacer(),
                     Text("Türkçe"),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     Icon(

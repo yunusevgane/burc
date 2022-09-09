@@ -5,10 +5,12 @@ import '/state_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:date_time_picker/date_time_picker.dart';
 
+// ignore: camel_case_types
 class burchesapla extends StatefulWidget {
   const burchesapla({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _burchesaplaState createState() => _burchesaplaState();
 }
 
@@ -22,10 +24,7 @@ class _burchesaplaState extends State<burchesapla> {
 
   int gun = 0;
 
-
-tarihhesap() {
-
-  
+  tarihhesap() {
     final birthday = DateTime.utc(1989, 7, 5);
     final date2 = DateTime.now();
     var difference = date2.difference(birthday).inDays;
@@ -39,17 +38,8 @@ tarihhesap() {
     return difference;
   }
 
-
-
   @override
   Widget build(BuildContext context) {
-    final berlinWallFell = DateTime.utc(1989, 11, 9);
-        final date2 = DateTime.now();
-
-    print(date2.year);
-
-
-
     return Scaffold(
       extendBody: true,
       extendBodyBehindAppBar: true,
@@ -92,8 +82,6 @@ tarihhesap() {
                 ),
               ),
             ),
-
-
             Text(tarihhesap().toString()),
           ],
         ),
