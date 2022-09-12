@@ -1,7 +1,6 @@
 import 'package:burc/state_data.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
-import 'dart:async';
 import 'package:flutter/services.dart' as rootBundle;
 import 'package:provider/provider.dart';
 
@@ -83,12 +82,12 @@ class _burcuyumuState extends State<burcuyumu> {
                               Provider.of<StateData>(context)
                                   .dil[seninburcu]
                                   .toString(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontWeight: FontWeight.w600,
                                   letterSpacing: 0.6),
                             ),
                             Spacer(),
-                            Icon(
+                            const Icon(
                               Icons.keyboard_arrow_right_outlined,
                               size: 24.0,
                             ),
@@ -361,7 +360,7 @@ class _burcuyumuState extends State<burcuyumu> {
                                 Provider.of<StateData>(context)
                                     .dil[onunburcu]
                                     .toString(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontWeight: FontWeight.w600,
                                     letterSpacing: 0.6),
                               ),
