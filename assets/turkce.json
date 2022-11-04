@@ -29,7 +29,7 @@
     "cinsellik": "Cinsellik",
     "evlilik": "Evlilik",
     "arkadaslik": "Arkadaşlık",
-    "ozellikleriniz": "Özellikleriniz",
+    "ozellikleri": "Özellikleri",
     "yukselenibul": "Yükseleni Bul",
     "burcsec": "Burç Seç",
     "burcuyumu": "Burç uyumu",
@@ -39,62 +39,35 @@
     "elementler": "Elementler ve Etkileri",
     "moderngezegenler": "Modern Gezegenler",
     "yukselenhesaplama": "Yükselen Hesaplama",
-    "burchesaplama": "Burç Hesaplama",
+    "burchesaplama": "Burç ve Yükselen Hesapla",
     "ayarlar": "Ayarlar",
     "klasikgezegenler": "Klasik Gezegenler",
-
-    "gunlukburcyorumlari":"Günlük Burç Yorumları",
-
-
-
-    "burclistesi": [
-        {
-            "adi": "Akrep",
-            "kisa": "akrep"
-        },
-        {
-            "adi": "Aslan",
-            "kisa": "aslan"
-        },
-        {
-            "adi": "Balık",
-            "kisa": "balik"
-        },
-        {
-            "adi": "Başak",
-            "kisa": "basak"
-        },
-        {
-            "adi": "Boğa",
-            "kisa": "boga"
-        },
-        {
-            "adi": "İkizler",
-            "kisa": "ikizler"
-        },
-        {
-            "adi": "Koç",
-            "kisa": "koc"
-        },
-        {
-            "adi": "Kova",
-            "kisa": "kova"
-        },
-        {
-            "adi": "Oğlak",
-            "kisa": "oglak"
-        },
-        {
-            "adi": "Terazi",
-            "kisa": "terazi"
-        },
-        {
-            "adi": "Yay",
-            "kisa": "yay"
-        },
-        {
-            "adi": "Yengeç",
-            "kisa": "yengec"
-        }
-    ]
+    "erkek": "Erkek",
+    "kadin": "Kadın",
+    "belirtilmedi": "Belirtilmedi",
+    "tasi": "Taşı",
+    "gunu": "Günü",
+    "genel": "Genel",
+    "tarzi": "Tarzı",
+    "bedende": "Bedende temsil ettiği bölge",
+    "anlastigi": "Anlaştığı burçlar",
+    "anlasamadigi": "Anlaşamadığı burçlar",
+    "olumlu": "Olumlu yönleri",
+    "olumsuz": "Olumsuz yönleri",
+    "asik": "Aşık",
+    "anne": "Anne",
+    "baba": "Baba",
+    "cocuk": "Çocuk",
+    "elementi": "Elementi",
+    "niteligi": "Niteliği",
+    "gezegeni": "Gezegeni",
+    "rengi": "Rengi",
+    "turkce": "Türkçe",
+    "ingilizce": "İngilizce",
+    "arapca": "Arapça",
+    "rusca": "Rusça",
+    "fransizca": "Fransızca",
+    "almanca": "Almanca",
+    "ispanyolca": "İspanyolca",
+    "italyanca": "İtalyanca"
 }

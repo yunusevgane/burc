@@ -1,18 +1,24 @@
-import 'package:burc/state_data.dart';
+import '/state_data.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
+// ignore: library_prefixes
 import 'package:flutter/services.dart' as rootBundle;
 import 'package:provider/provider.dart';
 
+// ignore: camel_case_types, must_be_immutable
 class burcuyumu extends StatefulWidget {
   const burcuyumu({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _burcuyumuState createState() => _burcuyumuState();
 }
 
+// ignore: camel_case_types
 class _burcuyumuState extends State<burcuyumu> {
   List aradetay = [];
+
+  // ignore: non_constant_identifier_names
   Json() async {
     final jsondata = await rootBundle.rootBundle.loadString('assets/uyum.json');
     var list = json.decode(jsondata) as List<dynamic>;
@@ -47,13 +53,12 @@ class _burcuyumuState extends State<burcuyumu> {
                   child: Column(
                     children: [
                       SizedBox(
-                        child:
-                            Image.asset('assets/burc/' + seninburcu + '.jpg'),
+                        child: Image.asset('assets/burc/$seninburcu.jpg'),
                       ),
                       ElevatedButton(
                         onPressed: () {
                           showModalBottomSheet(
-                            backgroundColor: Color.fromARGB(255, 1, 27, 48),
+                              backgroundColor: const Color(0xFF2e0a00),
                               isScrollControlled: true,
                               context: context,
                               builder: (context) {
@@ -86,7 +91,7 @@ class _burcuyumuState extends State<burcuyumu> {
                                   fontWeight: FontWeight.w600,
                                   letterSpacing: 0.6),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             const Icon(
                               Icons.keyboard_arrow_right_outlined,
                               size: 24.0,
@@ -104,12 +109,12 @@ class _burcuyumuState extends State<burcuyumu> {
                   child: Column(
                     children: [
                       SizedBox(
-                        child: Image.asset('assets/burc/' + onunburcu + '.jpg'),
+                        child: Image.asset('assets/burc/$onunburcu.jpg'),
                       ),
                       ElevatedButton(
                         onPressed: () {
                           showModalBottomSheet(
-                              backgroundColor: Color.fromARGB(255, 1, 27, 48),
+                              backgroundColor: const Color(0xFF2e0a00),
                               isScrollControlled: true,
                               context: context,
                               builder: (context) {
@@ -138,12 +143,12 @@ class _burcuyumuState extends State<burcuyumu> {
                               Provider.of<StateData>(context)
                                   .dil[onunburcu]
                                   .toString(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontWeight: FontWeight.w600,
                                   letterSpacing: 0.6),
                             ),
-                            Spacer(),
-                            Icon(
+                            const Spacer(),
+                            const Icon(
                               Icons.keyboard_arrow_right_outlined,
                               size: 24.0,
                             )
@@ -171,7 +176,7 @@ class _burcuyumuState extends State<burcuyumu> {
                                 Provider.of<StateData>(context)
                                     .dil["ask"]
                                     .toString(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontWeight: FontWeight.w600, fontSize: 18),
                               ),
                               const SizedBox(
@@ -194,7 +199,7 @@ class _burcuyumuState extends State<burcuyumu> {
                                 Provider.of<StateData>(context)
                                     .dil["cinsellik"]
                                     .toString(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontWeight: FontWeight.w600, fontSize: 18),
                               ),
                               const SizedBox(
@@ -217,7 +222,7 @@ class _burcuyumuState extends State<burcuyumu> {
                                 Provider.of<StateData>(context)
                                     .dil["evlilik"]
                                     .toString(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontWeight: FontWeight.w600, fontSize: 18),
                               ),
                               const SizedBox(
@@ -240,7 +245,7 @@ class _burcuyumuState extends State<burcuyumu> {
                                 Provider.of<StateData>(context)
                                     .dil["arkadaslik"]
                                     .toString(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontWeight: FontWeight.w600, fontSize: 18),
                               ),
                               const SizedBox(
@@ -263,120 +268,118 @@ class _burcuyumuState extends State<burcuyumu> {
               Text(Provider.of<StateData>(context).dil["burcuyumu"].toString()),
         ),
         body: Center(
-          child: Container(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Container(
-                    width: 250,
-                    child: Column(
-                      children: [
-                        Row(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  width: 250,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: const [
+                          Text('Senin Burcun'),
+                        ],
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          showModalBottomSheet(
+                              backgroundColor: const Color(0xFF2e0a00),
+                              isScrollControlled: true,
+                              context: context,
+                              builder: (context) {
+                                return Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    cardlist("akrep"),
+                                    cardlist("aslan"),
+                                    cardlist("balik"),
+                                    cardlist("basak"),
+                                    cardlist("boga"),
+                                    cardlist("ikizler"),
+                                    cardlist("koc"),
+                                    cardlist("kova"),
+                                    cardlist("oglak"),
+                                    cardlist("terazi"),
+                                    cardlist("yay"),
+                                    cardlist("yengec"),
+                                  ],
+                                );
+                              });
+                        },
+                        child: Row(
                           children: [
-                            Text('Senin Burcun'),
+                            Text(
+                              Provider.of<StateData>(context)
+                                  .dil[seninburcu]
+                                  .toString(),
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  letterSpacing: 0.6),
+                            ),
+                            const Spacer(),
+                            const Icon(
+                              Icons.keyboard_arrow_right_outlined,
+                              size: 24.0,
+                            ),
                           ],
                         ),
-                        ElevatedButton(
-                          onPressed: () {
-                            showModalBottomSheet(
-                                backgroundColor: Color.fromARGB(255, 1, 27, 48),
-                                isScrollControlled: true,
-                                context: context,
-                                builder: (context) {
-                                  return Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: <Widget>[
-                                      cardlist("akrep"),
-                                      cardlist("aslan"),
-                                      cardlist("balik"),
-                                      cardlist("basak"),
-                                      cardlist("boga"),
-                                      cardlist("ikizler"),
-                                      cardlist("koc"),
-                                      cardlist("kova"),
-                                      cardlist("oglak"),
-                                      cardlist("terazi"),
-                                      cardlist("yay"),
-                                      cardlist("yengec"),
-                                    ],
-                                  );
-                                });
-                          },
-                          child: Row(
-                            children: [
-                              Text(
-                                Provider.of<StateData>(context)
-                                    .dil[seninburcu]
-                                    .toString(),
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    letterSpacing: 0.6),
-                              ),
-                              Spacer(),
-                              Icon(
-                                Icons.keyboard_arrow_right_outlined,
-                                size: 24.0,
-                              ),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Row(
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: const [
+                          Text('Onun Burcu'),
+                        ],
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          showModalBottomSheet(
+                              backgroundColor: const Color(0xFF2e0a00),
+                              isScrollControlled: true,
+                              context: context,
+                              builder: (context) {
+                                return Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    cardlist2("akrep"),
+                                    cardlist2("aslan"),
+                                    cardlist2("balik"),
+                                    cardlist2("basak"),
+                                    cardlist2("boga"),
+                                    cardlist2("ikizler"),
+                                    cardlist2("koc"),
+                                    cardlist2("kova"),
+                                    cardlist2("oglak"),
+                                    cardlist2("terazi"),
+                                    cardlist2("yay"),
+                                    cardlist2("yengec"),
+                                  ],
+                                );
+                              });
+                        },
+                        child: Row(
                           children: [
-                            Text('Onun Burcu'),
+                            Text(
+                              Provider.of<StateData>(context)
+                                  .dil[onunburcu]
+                                  .toString(),
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  letterSpacing: 0.6),
+                            ),
+                            const Spacer(),
+                            const Icon(
+                              Icons.keyboard_arrow_right_outlined,
+                              size: 24.0,
+                            )
                           ],
                         ),
-                        ElevatedButton(
-                          onPressed: () {
-                            showModalBottomSheet(
-                                backgroundColor: Color.fromARGB(255, 1, 27, 48),
-                                isScrollControlled: true,
-                                context: context,
-                                builder: (context) {
-                                  return Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: <Widget>[
-                                      cardlist2("akrep"),
-                                      cardlist2("aslan"),
-                                      cardlist2("balik"),
-                                      cardlist2("basak"),
-                                      cardlist2("boga"),
-                                      cardlist2("ikizler"),
-                                      cardlist2("koc"),
-                                      cardlist2("kova"),
-                                      cardlist2("oglak"),
-                                      cardlist2("terazi"),
-                                      cardlist2("yay"),
-                                      cardlist2("yengec"),
-                                    ],
-                                  );
-                                });
-                          },
-                          child: Row(
-                            children: [
-                              Text(
-                                Provider.of<StateData>(context)
-                                    .dil[onunburcu]
-                                    .toString(),
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    letterSpacing: 0.6),
-                              ),
-                              Spacer(),
-                              Icon(
-                                Icons.keyboard_arrow_right_outlined,
-                                size: 24.0,
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
@@ -398,10 +401,10 @@ class _burcuyumuState extends State<burcuyumu> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(Provider.of<StateData>(context).dil[adi],
-                  style: TextStyle(color: Colors.white)),
+                  style: const TextStyle(color: Colors.white)),
             ),
-            Spacer(),
-            Icon(
+            const Spacer(),
+            const Icon(
               color: Colors.white,
               Icons.keyboard_arrow_right_outlined,
               size: 24.0,
@@ -426,10 +429,10 @@ class _burcuyumuState extends State<burcuyumu> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(Provider.of<StateData>(context).dil[adi],
-                  style: TextStyle(color: Colors.white)),
+                  style: const TextStyle(color: Colors.white)),
             ),
-            Spacer(),
-            Icon(
+            const Spacer(),
+            const Icon(
               color: Colors.white,
               Icons.keyboard_arrow_right_outlined,
               size: 24.0,

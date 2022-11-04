@@ -20,40 +20,40 @@ class _dillerState extends State<diller> {
         title: const Text('Dil'),
       ),
       body: ListView(
-        children: <Widget>[
+        children: const <Widget>[
           Card(
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(15.0),
               child: Text('Türkçe'),
             ),
           ),
           Card(
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(15.0),
               child: Text('İngilzice'),
             ),
           ),
           Card(
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(15.0),
               child: Text('Almanca'),
             ),
           ),
           Card(
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(15.0),
               child: Text('Rusça'),
             ),
           ),
           Card(
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(15.0),
               child: Text('Arapça'),
             ),
           ),
           Card(
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(15.0),
               child: Text('İspanyolca'),
             ),
           ),

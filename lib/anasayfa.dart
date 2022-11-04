@@ -6,8 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'dart:convert';
 import 'dart:async';
-// ignore: library_prefixes
 import 'package:flutter/services.dart' as rootBundle;
+
+// ignore: library_prefixes
 import 'package:animate_do/animate_do.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -19,9 +20,10 @@ import 'elementler/elementler.dart';
 import 'elementler/elementlerdetay.dart';
 import 'gezegenler/gezegendetay.dart';
 import 'uyum.dart';
-import 'burcuyumu.dart';
+import 'burcuyumu/burcuyumu.dart';
 import 'astrolojinedir.dart';
 import 'gezegenler/gezegenler.dart';
+import 'local_notification_service.dart';
 
 class anasayfa extends StatefulWidget {
   const anasayfa({Key? key}) : super(key: key);
@@ -38,10 +40,46 @@ String dil = "tr";
 String dosya = "";
 
 DateTime now = DateTime.now();
-String baslik = DateFormat('dd / MMMM / yyyy').format(now);
+String baslik = DateFormat('dd / MM / yyyy').format(now);
 
 class _anasayfaState extends State<anasayfa>
     with SingleTickerProviderStateMixin {
+  late final LocalNotificationService service;
+
+  bildirim() async {
+    await service.showScheduledNotification(
+      id: 1000,
+      title: 'Astroloji',
+      body: 'Bugün sizin için neler söylüyor?',
+      date: DateTime.now().add(const Duration(seconds: 10)),
+    );
+
+    for (int i = 1; i < 16; i++) {
+      var tarih = DateTime.now();
+      var gun = tarih.day.toString();
+      var ay = tarih.month.toString();
+      var yil = tarih.year.toString();
+      if (tarih.day < 10) {
+        gun = '0$gun';
+      }
+      if (tarih.month < 10) {
+        ay = '0$ay';
+      }
+
+      DateTime datem =
+          DateTime.parse('$yil-$ay-$gun 10:00:04Z').add(Duration(days: i));
+
+      await service.showScheduledNotification(
+        id: int.parse(datem.year.toString() +
+            datem.month.toString() +
+            datem.day.toString()),
+        title: 'Günlük burç yorumları.',
+        body: 'Gününüz Güzel Geçsin',
+        date: datem,
+      );
+    }
+  }
+
   String appName = "aslan";
   String packageName = "aslan";
   late TabController _tabController;
@@ -75,7 +113,7 @@ class _anasayfaState extends State<anasayfa>
     var difference = date2.difference(birthday).inDays;
     if (difference > 365) {
       if (difference / 365 > 1) {
-        difference = difference - (365 * (difference / 365).toInt());
+        difference = difference - (365 * difference ~/ 365);
       } else {
         difference = difference - 365;
       }
@@ -95,18 +133,21 @@ class _anasayfaState extends State<anasayfa>
 
   @override
   void initState() {
-    super.initState();
+    service = LocalNotificationService();
+    service.intialize();
     verisonal();
+    bildirim();
     ReadJsonData();
+    super.initState();
   }
 
-  Color renk1 = Color(0xFF0f3983);
+  Color renk1 = const Color(0xFF0f3983);
 
   @override
   Widget build(BuildContext context) {
     verioku();
 
-    if (burcyorum.length > 0) {
+    if (burcyorum.isNotEmpty) {
       return Scaffold(
         extendBody: true,
         appBar: AppBar(
@@ -116,7 +157,7 @@ class _anasayfaState extends State<anasayfa>
           actions: [
             ZoomIn(
               child: IconButton(
-                icon: Icon(
+                icon: const Icon(
                   size: 28.0,
                   Icons.settings,
                   color: Colors.white,
@@ -126,7 +167,7 @@ class _anasayfaState extends State<anasayfa>
                     context,
                     PageTransition(
                       type: PageTransitionType.rightToLeft,
-                      child: ayarlar(),
+                      child: const ayarlar(),
                     ),
                   );
                 },
@@ -155,16 +196,15 @@ class _anasayfaState extends State<anasayfa>
                 child: DrawerHeader(
                   decoration: BoxDecoration(
                       color: Theme.of(context).primaryColor,
-                      image: DecorationImage(
+                      image: const DecorationImage(
                           image: AssetImage("assets/icbg.png"),
                           fit: BoxFit.cover)),
                   child: Row(
                     children: [
                       ClipOval(
-                        child:
-                            Image.asset('assets/burc/' + packageName + '.jpg'),
+                        child: Image.asset('assets/burc/$packageName.jpg'),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Column(
@@ -174,7 +214,7 @@ class _anasayfaState extends State<anasayfa>
                             Provider.of<StateData>(context)
                                 .dil[packageName]
                                 .toString(),
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
@@ -184,7 +224,7 @@ class _anasayfaState extends State<anasayfa>
                             Provider.of<StateData>(context)
                                 .dil["gunlukburcyorumlari"]
                                 .toString(),
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
@@ -195,7 +235,7 @@ class _anasayfaState extends State<anasayfa>
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 0,
               ),
               Card(
@@ -205,7 +245,7 @@ class _anasayfaState extends State<anasayfa>
                       context,
                       PageTransition(
                           type: PageTransitionType.rightToLeft,
-                          child: astrolojinedir()),
+                          child: const astrolojinedir()),
                     );
                   },
                   child: Padding(
@@ -223,7 +263,7 @@ class _anasayfaState extends State<anasayfa>
                       context,
                       PageTransition(
                           type: PageTransitionType.rightToLeft,
-                          child: gezegenler()),
+                          child: const gezegenler()),
                     );
                   },
                   child: Padding(
@@ -241,7 +281,7 @@ class _anasayfaState extends State<anasayfa>
                       context,
                       PageTransition(
                           type: PageTransitionType.rightToLeft,
-                          child: elementler()),
+                          child: const elementler()),
                     );
                   },
                   child: Padding(
@@ -259,7 +299,7 @@ class _anasayfaState extends State<anasayfa>
                       context,
                       PageTransition(
                           type: PageTransitionType.rightToLeft,
-                          child: burcuyumu()),
+                          child: const burcuyumu()),
                     );
                   },
                   child: Padding(
@@ -297,7 +337,7 @@ class _anasayfaState extends State<anasayfa>
                       context,
                       PageTransition(
                           type: PageTransitionType.rightToLeft,
-                          child: ayarlar()),
+                          child: const ayarlar()),
                     );
                   },
                   child: Padding(
@@ -311,7 +351,7 @@ class _anasayfaState extends State<anasayfa>
               const SizedBox(
                 height: 10,
               ),
-              Center(child: Text("App Verison : " + version)),
+              Center(child: Text("App Verison : $version")),
             ],
           ),
         ),
@@ -319,7 +359,7 @@ class _anasayfaState extends State<anasayfa>
         body: Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/bg.png"),
               fit: BoxFit.cover,
@@ -338,13 +378,13 @@ class _anasayfaState extends State<anasayfa>
           body: Container(
               width: double.infinity,
               height: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("assets/bg.png"),
                   fit: BoxFit.cover,
                 ),
               ),
-              child: Center(child: CircularProgressIndicator())));
+              child: const Center(child: CircularProgressIndicator())));
     }
   }
 
@@ -388,17 +428,18 @@ class _anasayfaState extends State<anasayfa>
       children: [
         if (burclar[adi] != null)
           Container(
-            margin: EdgeInsets.only(left: 10, right: 10, top: 0, bottom: 0),
+            margin:
+                const EdgeInsets.only(left: 10, right: 10, top: 0, bottom: 0),
             width: (MediaQuery.of(context).size.width),
             height: MediaQuery.of(context).size.height - 150,
             // height: MediaQuery.of(context).size.height - 250,
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Stack(
               children: [
                 Container(
-                  margin: EdgeInsets.only(top: 75.0),
+                  margin: const EdgeInsets.only(top: 75.0),
                   alignment: Alignment.bottomCenter,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(20)),
                     color: Color.fromARGB(70, 0, 0, 0),
                   ),
@@ -431,35 +472,32 @@ class _anasayfaState extends State<anasayfa>
                                           );
                                         },
                                         child: SizedBox(
-                                          child: Image.asset(
-                                              'assets/gezegenler/' +
-                                                  burclar[adi]["gezegen"] +
-                                                  '.png'),
                                           width: 75,
                                           height: 75,
+                                          child: Image.asset(
+                                              '${'assets/gezegenler/' + burclar[adi]["gezegen"]}.png'),
                                         ),
                                       ),
                                       Text(burclar[adi][dil]["gezegen"])
                                     ],
                                   ),
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 FadeInUp(
                                   child: Column(
                                     children: [
                                       ClipOval(
                                         child: SizedBox(
-                                          child: Image.asset('assets/burc/' +
-                                              packageName +
-                                              '.jpg'),
                                           width: 150,
                                           height: 150,
+                                          child: Image.asset(
+                                              'assets/burc/$packageName.jpg'),
                                         ),
                                       ),
                                     ],
                                   ),
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 FadeInRight(
                                   child: Column(
                                     children: [
@@ -477,12 +515,10 @@ class _anasayfaState extends State<anasayfa>
                                           );
                                         },
                                         child: SizedBox(
-                                          child: Image.asset(
-                                              'assets/elementler/' +
-                                                  burclar[adi]["elemet"] +
-                                                  '.png'),
                                           width: 75,
                                           height: 75,
+                                          child: Image.asset(
+                                              '${'assets/elementler/' + burclar[adi]["elemet"]}.png'),
                                         ),
                                       ),
                                       Text(burclar[adi][dil]["elemet"])
@@ -493,13 +529,13 @@ class _anasayfaState extends State<anasayfa>
                             ),
                             FadeInUp(
                               delay: const Duration(milliseconds: 500),
-                              child: Container(
+                              child: SizedBox(
                                 width: 300,
                                 child: Column(
                                   children: [
                                     Text(burclar[adi][dil]["name"].toString(),
                                         textAlign: TextAlign.center,
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.bold,
                                         )),
@@ -519,7 +555,7 @@ class _anasayfaState extends State<anasayfa>
                                 child: Text(
                                   yorumtum,
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(fontSize: 18),
+                                  style: const TextStyle(fontSize: 18),
                                 ),
                               ),
                             ),
@@ -542,7 +578,7 @@ class _anasayfaState extends State<anasayfa>
       delay: const Duration(milliseconds: 500),
       child: Container(
         // margin: EdgeInsets.only(bottom: 10),
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
         height: 60,
@@ -569,14 +605,14 @@ class _anasayfaState extends State<anasayfa>
                   child: Container(
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
                       color: renk1,
                     ),
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.all(5),
                     child: Row(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Icon(
                             size: 24.0,
                             Icons.favorite_border,
@@ -612,14 +648,14 @@ class _anasayfaState extends State<anasayfa>
                   child: Container(
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
                       color: renk1,
                     ),
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.all(5),
                     child: Row(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Icon(
                             size: 24.0,
                             Icons.hotel_rounded,
@@ -655,14 +691,14 @@ class _anasayfaState extends State<anasayfa>
                   child: Container(
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
                       color: renk1,
                     ),
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.all(5),
                     child: Row(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Icon(
                             size: 24.0,
                             Icons.gite_outlined,
@@ -697,15 +733,15 @@ class _anasayfaState extends State<anasayfa>
                   }, // Handle your callback
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
                       color: renk1,
                     ),
                     alignment: Alignment.center,
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.all(5),
                     child: Row(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Icon(
                             size: 24.0,
                             Icons.group,
@@ -731,21 +767,23 @@ class _anasayfaState extends State<anasayfa>
                       context,
                       PageTransition(
                         type: PageTransitionType.rightToLeft,
-                        child: ozellikler(),
+                        child: ozellikler(
+                          burc: packageName,
+                        ),
                       ),
                     );
                   }, // Handle your callback
                   child: Container(
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
                       color: renk1,
                     ),
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.all(5),
                     child: Row(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Icon(
                             size: 24.0,
                             Icons.fingerprint,
@@ -780,14 +818,14 @@ class _anasayfaState extends State<anasayfa>
                   child: Container(
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
                       color: renk1,
                     ),
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.all(5),
                     child: Row(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Icon(
                             size: 24.0,
                             Icons.find_replace,

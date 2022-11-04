@@ -1,8 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '/state_data.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:date_time_picker/date_time_picker.dart';
 
 // ignore: camel_case_types
@@ -30,7 +26,7 @@ class _burchesaplaState extends State<burchesapla> {
     var difference = date2.difference(birthday).inDays;
     if (difference > 365) {
       if (difference / 365 > 1) {
-        difference = difference - (365 * (difference / 365).toInt());
+        difference = difference - (365 * difference ~/ 365);
       } else {
         difference = difference - 365;
       }
@@ -46,7 +42,7 @@ class _burchesaplaState extends State<burchesapla> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
-        title: Text('Burç Hesaplama'),
+        title: const Text('Burç Hesaplama'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -60,7 +56,7 @@ class _burchesaplaState extends State<burchesapla> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFFebcc51),
+                  color: const Color(0xFFebcc51),
                 ),
                 padding: const EdgeInsets.all(8.0),
                 child: Column(

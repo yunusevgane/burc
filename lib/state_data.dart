@@ -20,7 +20,7 @@ class StateData with ChangeNotifier {
   Future<void> dilsec(String diladi) async {
     dilim = diladi;
     _Lveri.setString('dil', diladi);
-    var data = await rootBundle.loadString('assets/' + diladi + '.json');
+    var data = await rootBundle.loadString('assets/$diladi.json');
     var jsonResponse = json.decode(data);
     dil = jsonResponse;
     notifyListeners();
@@ -32,7 +32,7 @@ class StateData with ChangeNotifier {
       dilsec(diladi);
     } else {
       // dilsec(ui.window.locale.languageCode);
-      dilsec("tr");
+      dilsec("turkce");
     }
   }
 

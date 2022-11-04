@@ -2,21 +2,26 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+// ignore: library_prefixes
 import 'package:flutter/services.dart' as rootBundle;
 
 import '../state_data.dart';
 import 'gezegendetay.dart';
 
+// ignore: camel_case_types, must_be_immutable
 class gezegenler extends StatefulWidget {
   const gezegenler({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _gezegenlerState createState() => _gezegenlerState();
 }
 
+// ignore: camel_case_types
 class _gezegenlerState extends State<gezegenler> {
   Map aradetay = {};
 
+  // ignore: non_constant_identifier_names
   Json() async {
     final jsondata =
         await rootBundle.rootBundle.loadString('assets/gezegenler/index.json');
@@ -42,7 +47,7 @@ class _gezegenlerState extends State<gezegenler> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/bg.png"),
             fit: BoxFit.cover,
@@ -52,7 +57,7 @@ class _gezegenlerState extends State<gezegenler> {
           children: [
             if (aradetay.length > 1)
               Card(
-                margin: EdgeInsets.only(
+                margin: const EdgeInsets.only(
                   top: 10,
                   bottom: 10,
                 ),
@@ -62,7 +67,7 @@ class _gezegenlerState extends State<gezegenler> {
                     Provider.of<StateData>(context)
                         .dil["klasikgezegenler"]
                         .toString(),
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   ),
                 ),
               ),
@@ -74,7 +79,7 @@ class _gezegenlerState extends State<gezegenler> {
             card('saturn'),
             card('venus'),
             Card(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 30,
                 bottom: 10,
               ),
@@ -84,7 +89,7 @@ class _gezegenlerState extends State<gezegenler> {
                   Provider.of<StateData>(context)
                       .dil["moderngezegenler"]
                       .toString(),
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                 ),
               ),
             ),
@@ -102,11 +107,8 @@ class _gezegenlerState extends State<gezegenler> {
       String burclist = "";
       for (int i = 0; i < aradetay[adi]["burc"].length; i++) {
         if (burclist != "") {
-          burclist = burclist +
-              " - " +
-              Provider.of<StateData>(context)
-                  .dil[aradetay[adi]["burc"][i]]
-                  .toString();
+          burclist =
+              "$burclist - ${Provider.of<StateData>(context).dil[aradetay[adi]["burc"][i]]}";
         } else {
           burclist = Provider.of<StateData>(context)
               .dil[aradetay[adi]["burc"][i]]
@@ -116,7 +118,7 @@ class _gezegenlerState extends State<gezegenler> {
 
       return Card(
         elevation: 20,
-        child: new InkWell(
+        child: InkWell(
           onTap: () {
             Navigator.push(
               context,
@@ -128,23 +130,22 @@ class _gezegenlerState extends State<gezegenler> {
             );
           },
           child: ListTile(
-            leading: Image.asset('assets/gezegenler/' +
-                aradetay[adi]["kisa"].toString() +
-                '.png'),
+            leading:
+                Image.asset('assets/gezegenler/${aradetay[adi]["kisa"]}.png'),
             title: Text(
               aradetay[adi]["adi"].toString(),
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
             subtitle: Text(
               burclist,
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
-            trailing: Icon(Icons.arrow_forward_ios, color: Colors.white),
+            trailing: const Icon(Icons.arrow_forward_ios, color: Colors.white),
           ),
         ),
       );
     } else {
-      return Text(".");
+      return const Text(".");
     }
   }
 }

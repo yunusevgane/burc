@@ -7,8 +7,6 @@ import 'package:intl/intl.dart';
 import 'dart:convert';
 import 'package:flutter_time_picker_spinner/flutter_time_picker_spinner.dart';
 
-
-
 // ignore: camel_case_types
 class yukselensec extends StatefulWidget {
   String burc;
@@ -84,7 +82,7 @@ class _yukselensecState extends State<yukselensec> {
       ),
       body: Container(
         height: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/bg.png"),
             fit: BoxFit.cover,
@@ -100,7 +98,7 @@ class _yukselensecState extends State<yukselensec> {
               children: [
                 Container(
                   padding: const EdgeInsets.all(3.0),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10.0),
                     ),
@@ -110,8 +108,8 @@ class _yukselensecState extends State<yukselensec> {
                     children: [
                       ClipOval(
                         child: SizedBox(
-                          child: Image.asset('assets/burc/' + yuk + '.jpg'),
                           width: (MediaQuery.of(context).size.width * 0.4),
+                          child: Image.asset('assets/burc/$yuk.jpg'),
                         ),
                       ),
                       const SizedBox(
@@ -119,7 +117,7 @@ class _yukselensecState extends State<yukselensec> {
                       ),
                       Text(
                         Provider.of<StateData>(context).dil[yuk].toString(),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 24,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -139,18 +137,18 @@ class _yukselensecState extends State<yukselensec> {
                       width: 150,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Color(0xFF022b54),
+                        color: const Color(0xFF022b54),
                       ),
                       padding: const EdgeInsets.all(10.0),
                       child: TimePickerSpinner(
                         time: DateTime.utc(2000, 01, 01, 00, 00),
                         is24HourMode: true,
                         alignment: Alignment.center,
-                        normalTextStyle: TextStyle(
+                        normalTextStyle: const TextStyle(
                             fontSize: 24,
                             color: Color.fromARGB(100, 255, 255, 255)),
                         highlightedTextStyle:
-                            TextStyle(fontSize: 24, color: Colors.white),
+                            const TextStyle(fontSize: 24, color: Colors.white),
                         spacing: 25,
                         itemHeight: 30,
                         isForce2Digits: true,
@@ -158,18 +156,16 @@ class _yukselensecState extends State<yukselensec> {
                         onTimeChange: (time) {
                           setState(() {
                             print((time.hour * 60) + time.minute);
-                            if (time.hour != null) {
-                              yukselen(
-                                (time.hour * 60) + time.minute,
-                              );
-                            }
+                            yukselen(
+                              (time.hour * 60) + time.minute,
+                            );
                           });
                         },
                       ),
                     ),
                     Container(
                       alignment: Alignment.center,
-                      child: Text(
+                      child: const Text(
                         ":",
                         style: TextStyle(
                             fontSize: 24,

@@ -1,32 +1,11 @@
 import 'state_data.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'anasayfa.dart';
 import 'package:provider/provider.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'firebase_options.dart';
-
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  await Firebase.initializeApp();
-}
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await StateData().createStatePrefObject();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  FirebaseMessaging messaging = FirebaseMessaging.instance;
-  NotificationSettings settings = await messaging.requestPermission(
-    alert: true,
-    announcement: false,
-    badge: true,
-    carPlay: false,
-    criticalAlert: false,
-    provisional: false,
-    sound: true,
-  );
-  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   runApp(ChangeNotifierProvider<StateData>(
       create: (BuildContext context) {
         return StateData();
@@ -40,9 +19,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Provider.of<StateData>(context, listen: false).ilkadim();
-    Color renk1 = Color(0xFF022b54);
-    Color renk2 = Color(0xFF5a9dd1);
-    Color renk3 = Color(0xFF02345d);
+    Color renk1 = const Color(0xFF022b54);
+    Color renk3 = const Color(0xFF02345d);
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -60,7 +38,7 @@ class MyApp extends StatelessWidget {
         ),
         appBarTheme: AppBarTheme(
           color: renk3,
-          iconTheme: IconThemeData(
+          iconTheme: const IconThemeData(
             color: Colors.white,
           ),
         ),
@@ -69,12 +47,12 @@ class MyApp extends StatelessWidget {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            primary: renk3, // background (button) color
-            onPrimary: Colors.white, // foreground (text) color
+            foregroundColor: Colors.white,
+            backgroundColor: renk3, // foreground (text) color
           ),
         ),
       ),
-      home: anasayfa(),
+      home: const anasayfa(),
     );
   }
 }

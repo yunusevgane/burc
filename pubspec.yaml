@@ -10,22 +10,29 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.5
-  package_info_plus: ^1.4.3+1
+  package_info_plus: ^3.0.1
   animate_do: ^2.1.0
   page_transition: ^2.0.9
-  provider: ^6.0.3
+  provider: ^6.0.4
   shared_preferences: ^2.0.15
-  firebase_core: ^1.22.0
-  firebase_messaging: ^13.0.1
-  flutter_widget_from_html_core: ^0.8.5+3
+  flutter_widget_from_html_core: ^0.9.0
   intl: ^0.17.0
   datetime_picker_formfield: ^2.0.1
   date_time_picker: ^2.1.0
   flutter_native_splash: ^2.2.0+1
+  flutter_datetime_picker: ^1.5.1
+
   flutter_localizations:
     sdk: flutter
-  flutter_holo_date_picker: ^1.0.6
+  google_fonts: ^3.0.1
+  path_provider: ^2.0.11
+  screenshot: ^1.2.3
+  flutter_linear_datepicker: ^2.0.4
+  flutter_holo_date_picker: ^1.1.0
   flutter_time_picker_spinner: ^2.0.0
+  flutter_local_notifications: ^9.1.4
+  rxdart: ^0.27.5
+
 
 dev_dependencies:
   flutter_test:
@@ -46,10 +53,10 @@ flutter:
 
 flutter_native_splash:
   background_image: assets/bg.png
-  image: assets/zodcom.png
+  image: assets/icon.png
   # branding: assets/zodcom.png
   android_12:
-    image: assets/zodcom.png
+    image: assets/icon.png
     background_image: assets/bg.png
 
 #flutter pub run flutter_native_splash:create

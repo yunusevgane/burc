@@ -2,21 +2,26 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+// ignore: library_prefixes
 import 'package:flutter/services.dart' as rootBundle;
 
 import '/state_data.dart';
 import 'elementlerdetay.dart';
 
+// ignore: camel_case_types, must_be_immutable
 class elementler extends StatefulWidget {
   const elementler({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _elementlerState createState() => _elementlerState();
 }
 
+// ignore: camel_case_types
 class _elementlerState extends State<elementler> {
   Map aradetay = {};
 
+  // ignore: non_constant_identifier_names
   Json() async {
     final jsondata =
         await rootBundle.rootBundle.loadString('assets/elementler/index.json');
@@ -35,14 +40,13 @@ class _elementlerState extends State<elementler> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(Provider.of<StateData>(context)
-            .dil["elementler"]
-            .toString()),
+        title:
+            Text(Provider.of<StateData>(context).dil["elementler"].toString()),
       ),
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/bg.png"),
             fit: BoxFit.cover,
@@ -65,11 +69,8 @@ class _elementlerState extends State<elementler> {
       String burclist = "";
       for (int i = 0; i < aradetay[adi]["burc"].length; i++) {
         if (burclist != "") {
-          burclist = burclist +
-              " - " +
-              Provider.of<StateData>(context)
-                  .dil[aradetay[adi]["burc"][i]]
-                  .toString();
+          burclist =
+              "$burclist - ${Provider.of<StateData>(context).dil[aradetay[adi]["burc"][i]]}";
         } else {
           burclist = Provider.of<StateData>(context)
               .dil[aradetay[adi]["burc"][i]]
@@ -79,7 +80,7 @@ class _elementlerState extends State<elementler> {
 
       return Card(
         elevation: 20,
-        child: new InkWell(
+        child: InkWell(
           onTap: () {
             Navigator.push(
               context,
@@ -91,23 +92,22 @@ class _elementlerState extends State<elementler> {
             );
           },
           child: ListTile(
-            leading: Image.asset('assets/elementler/' +
-                aradetay[adi]["kisa"].toString() +
-                '.png'),
+            leading:
+                Image.asset('assets/elementler/${aradetay[adi]["kisa"]}.png'),
             title: Text(
               aradetay[adi]["adi"].toString(),
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
             subtitle: Text(
               burclist,
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
-            trailing: Icon(Icons.arrow_forward_ios, color: Colors.white),
+            trailing: const Icon(Icons.arrow_forward_ios, color: Colors.white),
           ),
         ),
       );
     } else {
-      return Text(".");
+      return const Text(".");
     }
   }
 }

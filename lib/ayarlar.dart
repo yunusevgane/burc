@@ -31,7 +31,7 @@ class _ayarlarState extends State<ayarlar> {
             ElevatedButton(
               onPressed: () {
                 showModalBottomSheet(
-                     backgroundColor:Theme.of(context).primaryColorLight,
+                    backgroundColor: Theme.of(context).primaryColorLight,
                     isScrollControlled: true,
                     context: context,
                     builder: (context) {
@@ -52,7 +52,8 @@ class _ayarlarState extends State<ayarlar> {
                                     child: Text(
                                         Provider.of<StateData>(context)
                                             .dil["burclistesi"][i]["adi"],
-                                        style: TextStyle(color: Colors.white)),
+                                        style: const TextStyle(
+                                            color: Colors.white)),
                                   ),
                                   const Spacer(),
                                   const Icon(
@@ -99,7 +100,7 @@ class _ayarlarState extends State<ayarlar> {
             ElevatedButton(
               onPressed: () {
                 showModalBottomSheet(
-                   backgroundColor:Theme.of(context).primaryColorLight,
+                    backgroundColor: Theme.of(context).primaryColorLight,
                     isScrollControlled: true,
                     context: context,
                     builder: (context) {
@@ -120,9 +121,10 @@ class _ayarlarState extends State<ayarlar> {
                                     child: Text(
                                         Provider.of<StateData>(context)
                                             .dil["burclistesi"][i]["adi"],
-                                        style: TextStyle(color: Colors.white)),
+                                        style: const TextStyle(
+                                            color: Colors.white)),
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                   const Icon(
                                     color: Colors.white,
                                     Icons.keyboard_arrow_right_outlined,
@@ -163,7 +165,7 @@ class _ayarlarState extends State<ayarlar> {
             ElevatedButton(
               onPressed: () {
                 showModalBottomSheet(
-                 backgroundColor:Theme.of(context).primaryColorLight,
+                    backgroundColor: Theme.of(context).primaryColorLight,
                     isScrollControlled: true,
                     context: context,
                     builder: (context) {
@@ -184,7 +186,8 @@ class _ayarlarState extends State<ayarlar> {
                                     child: Text(
                                         Provider.of<StateData>(context)
                                             .dil["burclistesi"][i]["adi"],
-                                        style: TextStyle(color: Colors.white)),
+                                        style: const TextStyle(
+                                            color: Colors.white)),
                                   ),
                                   const Spacer(),
                                   const Icon(
@@ -227,7 +230,7 @@ class _ayarlarState extends State<ayarlar> {
             ElevatedButton(
               onPressed: () {
                 showModalBottomSheet(
-                  backgroundColor:Theme.of(context).primaryColorLight,
+                    backgroundColor: Theme.of(context).primaryColorLight,
                     isScrollControlled: true,
                     context: context,
                     builder: (context) {
