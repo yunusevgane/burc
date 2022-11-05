@@ -69,7 +69,7 @@ flutter_icons:
   ios: true
   image_path: "assets/burc/yay.jpg"
 
-  # flutter pub run change_app_package_name:main com.zodcomburclar.yay
+  # flutter pub run change_app_package_name:main com.shemaster.yay
   # flutter pub run flutter_app_name
   # flutter pub run flutter_launcher_icons:main
   # flutterfire configure

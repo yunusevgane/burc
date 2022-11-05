@@ -87,7 +87,7 @@ class _anasayfaState extends State<anasayfa>
     PackageInfo packageInfo = await PackageInfo.fromPlatform();
     appName = packageInfo.appName;
     packageName = packageInfo.packageName;
-    packageName = packageName.replaceAll("com.zodcomburclar.", '');
+    packageName = packageName.replaceAll("com.shemaster.", '');
 
     version = packageInfo.version;
     setState(() {});
@@ -588,6 +588,48 @@ class _anasayfaState extends State<anasayfa>
           child: Row(
             children: [
               FadeInUp(
+                delay: const Duration(milliseconds: 400),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.rightToLeft,
+                        child: ozellikler(
+                          burc: burc,
+                        ),
+                      ),
+                    );
+                  }, // Handle your callback
+                  child: Container(
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
+                      color: renk1,
+                    ),
+                    margin: const EdgeInsets.all(5),
+                    child: Row(
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Icon(
+                            size: 24.0,
+                            Icons.fingerprint,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(Provider.of<StateData>(context)
+                            .dil["ozellikleri"]
+                            .toString()),
+                        const SizedBox(
+                          width: 15,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              FadeInUp(
                 delay: const Duration(milliseconds: 800),
                 child: InkWell(
                   onTap: () {
@@ -750,48 +792,6 @@ class _anasayfaState extends State<anasayfa>
                         ),
                         Text(Provider.of<StateData>(context)
                             .dil["arkadaslik"]
-                            .toString()),
-                        const SizedBox(
-                          width: 15,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              FadeInUp(
-                delay: const Duration(milliseconds: 1600),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      PageTransition(
-                        type: PageTransitionType.rightToLeft,
-                        child: ozellikler(
-                          burc: packageName,
-                        ),
-                      ),
-                    );
-                  }, // Handle your callback
-                  child: Container(
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(Radius.circular(10)),
-                      color: renk1,
-                    ),
-                    margin: const EdgeInsets.all(5),
-                    child: Row(
-                      children: [
-                        const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Icon(
-                            size: 24.0,
-                            Icons.fingerprint,
-                            color: Colors.white,
-                          ),
-                        ),
-                        Text(Provider.of<StateData>(context)
-                            .dil["ozellikleriniz"]
                             .toString()),
                         const SizedBox(
                           width: 15,

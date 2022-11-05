@@ -1,4 +1,4 @@
-package com.zodcomburclar.yengec
+package com.shemaster.yay
 
 import io.flutter.embedding.android.FlutterActivity
 
