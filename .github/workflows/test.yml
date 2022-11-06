@@ -15,10 +15,11 @@ jobs:
       - shell: pwsh
         run: |
           echo "Copying $FILE"
-          cp -R pubspec.yaml pubspec2.yaml
+          cp -R ./pubspec.yaml ./pubspec2.yaml
 
 # name: CI
 
+# 07.11.20222
 # on: push
 
 # # on:
