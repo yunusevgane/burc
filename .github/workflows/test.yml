@@ -14,7 +14,7 @@ jobs:
 
       - name: Create file
         run: |
-          echo First        > other.txt
+          echo First        > ././other.txt
           echo Second Line >> other.txt
           echo Third       >> other.txt
 
