@@ -5,12 +5,12 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: copy file
         uses: canastro/copy-file-action@master
 
         with:
-          echo : "cp -p pubspec.yaml pubspec2.yaml"
+          run : "cp -p pubspec.yaml pubspec2.yaml"
 # name: CI
 
 # on: push
