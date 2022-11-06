@@ -2,7 +2,6 @@ name: CI
 
 on: push
 
-
 # - run: flutter pub run change_app_package_name:main com.shemaster.akrep
 # - run: flutter pub run flutter_app_name
 # - run: flutter pub run flutter_launcher_icons:main
@@ -20,7 +19,6 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: "stable"
-      - run: cd /ham
       - run: flutter pub get
       - run: flutter format .
       - run: dart fix --dry-run
