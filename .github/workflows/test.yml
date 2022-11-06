@@ -24,10 +24,10 @@ jobs:
       # - run: dart fix --dry-run
       # - run: dart fix --apply
 
-      - run: flutter pub run change_app_package_name:main com.shemaster.akrep
-      - run: flutter pub run flutter_app_name
-      - run: flutter pub run flutter_launcher_icons:main
-      - run: flutter pub run flutter_native_splash:create
+      # - run: flutter pub run change_app_package_name:main com.shemaster.akrep
+      # - run: flutter pub run flutter_app_name
+      # - run: flutter pub run flutter_launcher_icons:main
+      # - run: flutter pub run flutter_native_splash:create
       - run: flutter build appbundle
 
   # build_appbundle:
