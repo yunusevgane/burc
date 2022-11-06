@@ -13,6 +13,7 @@ jobs:
           printf "Hello\nWorld\n" > hw.txt
 
       - name: Create file
+      - shell: pwsh
         run: |
           echo First        > ././other.txt
           echo Second Line >> other.txt
