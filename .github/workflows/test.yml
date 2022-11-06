@@ -29,7 +29,7 @@ jobs:
       - run: dart fix --dry-run
       - run: dart fix --apply
       # - run: flutter analyze
-      - run: flutter test
+      # - run: flutter test
 
   build_ios:
     name: Build Flutter (iOS)
