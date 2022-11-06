@@ -13,7 +13,7 @@ jobs:
           # Checkout as many commits as needed for the diff
           fetch-depth: 2
       - shell: pwsh
-        run: php -r "file_exists('pubspec.yaml') || copy('pubspec.yaml', 'pubspec2.yaml');"
+        run: php -r "file_exists('./pubspec.yaml') || copy('pubspec.yaml', 'pubspec2.yaml');"
 
       # run: |
       #     echo "Copying $FILE"
