@@ -10,7 +10,7 @@ jobs:
         uses: canastro/copy-file-action@master
 
         with:
-          command: "cp -p pubspec.yaml pubspec2.yaml"
+          echo : "cp -p pubspec.yaml pubspec2.yaml"
 # name: CI
 
 # on: push
