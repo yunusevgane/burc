@@ -16,15 +16,8 @@ jobs:
         run: |
           FILE=./pubspec.yaml
           FILE2=./pubspec2.yaml
-          if [ -f "$FILE" ]; 
-          then
             echo "Copying $FILE"
             cp -R ./pubspec.yaml ./pubspec2.yaml
-          elif [ -f "$FILE2" ]; 
-          then
-            echo "Copying $FILES"
-            cp -R ./pubspec.yaml ./pubspec2.yaml
-          fi
 
 # name: CI
 
