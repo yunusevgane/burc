@@ -8,16 +8,27 @@ jobs:
   conditional_step:
     runs-on: "ubuntu-20.04"
     steps:
-      - uses: actions/checkout@v2
-        with:
-          # Checkout as many commits as needed for the diff
-          fetch-depth: 2
-      - shell: pwsh
-        run: php -r "file_exists('./pubspec.yaml') || copy('pubspec.yaml', 'pubspec2.yaml');"
+      - name: Create file
+        run: |
+          printf "Hello\nWorld\n" > hw.txt
 
-      # run: |
-      #     echo "Copying $FILE"
-      #     cp -R ./pubspec.yaml ./pubspec2.yaml
+      - name: Create file
+        run: |
+          echo First        > other.txt
+          echo Second Line >> other.txt
+          echo Third       >> other.txt
+
+        # - uses: actions/checkout@v2
+        #   with:
+        #     # Checkout as many commits as needed for the diff
+        #     fetch-depth: 2
+        # - shell: pwsh
+        #   run: php -r "file_exists('./pubspec.yaml') || copy('pubspec.yaml', 'pubspec2.yaml');"
+
+        # run: |
+        #     echo "Copying $FILE"
+        #     cp -R ./pubspec.yaml ./pubspec2.yaml
+
 # name: CI
 
 # 07.11.20222
