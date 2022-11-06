@@ -2,20 +2,30 @@ name: demo
 on:
   push:
     branches:
-      - 'main'
+      - "main"
 
 jobs:
   conditional_step:
-    runs-on: 'ubuntu-20.04'
+    runs-on: "ubuntu-20.04"
     steps:
-    - uses: actions/checkout@v2
-      with:
-        # Checkout as many commits as needed for the diff
-        fetch-depth: 2
-    - shell: pwsh
-      # Give an id to the step, so we can reference it later
-      id: check_file_changed
-      run: "cp -p pubspec.yaml pubspec2.yaml"
+      - uses: actions/checkout@v2
+        with:
+          # Checkout as many commits as needed for the diff
+          fetch-depth: 2
+      - shell: pwsh
+        run: |
+          FILE=./pubspec.yaml
+          FILE2=./pubspec2.yaml
+          if [ -f "$FILE" ]; 
+          then
+            echo "Copying $FILE"
+            cp -R ./pubspec.yaml ./pubspec2.yaml
+          elif [ -f "$FILE2" ]; 
+          then
+            echo "Copying $FILES"
+            cp -R ./pubspec.yaml ./pubspec2.yaml
+          fi
+
 # name: CI
 
 # on: push
