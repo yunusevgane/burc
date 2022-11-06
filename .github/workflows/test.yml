@@ -14,10 +14,8 @@ jobs:
           fetch-depth: 2
       - shell: pwsh
         run: |
-          FILE=./pubspec.yaml
-          FILE2=./pubspec2.yaml
-            echo "Copying $FILE"
-            cp -R ./pubspec.yaml ./pubspec2.yaml
+          echo "Copying $FILE"
+          cp -R pubspec.yaml pubspec2.yaml
 
 # name: CI
 
