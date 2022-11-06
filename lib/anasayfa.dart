@@ -25,10 +25,12 @@ import 'astrolojinedir.dart';
 import 'gezegenler/gezegenler.dart';
 import 'local_notification_service.dart';
 
+// ignore: camel_case_types
 class anasayfa extends StatefulWidget {
   const anasayfa({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _anasayfaState createState() => _anasayfaState();
 }
 
@@ -42,6 +44,7 @@ String dosya = "";
 DateTime now = DateTime.now();
 String baslik = DateFormat('dd / MM / yyyy').format(now);
 
+// ignore: camel_case_types
 class _anasayfaState extends State<anasayfa>
     with SingleTickerProviderStateMixin {
   late final LocalNotificationService service;
@@ -141,7 +144,7 @@ class _anasayfaState extends State<anasayfa>
     super.initState();
   }
 
-  Color renk1 = const Color(0xFF0f3983);
+  Color renk1 = const Color(0xFF2e0a00);
 
   @override
   Widget build(BuildContext context) {
@@ -197,7 +200,7 @@ class _anasayfaState extends State<anasayfa>
                   decoration: BoxDecoration(
                       color: Theme.of(context).primaryColor,
                       image: const DecorationImage(
-                          image: AssetImage("assets/icbg.png"),
+                          image: AssetImage("assets/bg.png"),
                           fit: BoxFit.cover)),
                   child: Row(
                     children: [

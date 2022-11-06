@@ -19,17 +19,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Provider.of<StateData>(context, listen: false).ilkadim();
-    Color renk1 = const Color(0xFF022b54);
-    Color renk3 = const Color(0xFF02345d);
+    Color renk1 = const Color(0xFF2e0a00);
+    Color renk2 = const Color.fromARGB(255, 28, 7, 5);
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.light(
-          primary: renk3, // <-- SEE HERE
-          onSurface: renk3, // <-- SEE HERE
+          primary: renk2, // <-- SEE HERE
+          onSurface: renk2, // <-- SEE HERE
         ),
-        primaryColor: renk3,
+        primaryColor: renk2,
         primaryColorLight: renk1,
         textTheme: const TextTheme(bodyText2: TextStyle(color: Colors.white)),
         scaffoldBackgroundColor: renk1,
@@ -37,18 +37,18 @@ class MyApp extends StatelessWidget {
           backgroundColor: renk1,
         ),
         appBarTheme: AppBarTheme(
-          color: renk3,
+          color: renk2,
           iconTheme: const IconThemeData(
             color: Colors.white,
           ),
         ),
         cardTheme: CardTheme(
-          color: renk3,
+          color: renk2,
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             foregroundColor: Colors.white,
-            backgroundColor: renk3, // foreground (text) color
+            backgroundColor: renk2, // foreground (text) color
           ),
         ),
       ),

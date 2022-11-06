@@ -28,75 +28,8 @@ class _ayarlarState extends State<ayarlar> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            ElevatedButton(
-              onPressed: () {
-                showModalBottomSheet(
-                    backgroundColor: Theme.of(context).primaryColorLight,
-                    isScrollControlled: true,
-                    context: context,
-                    builder: (context) {
-                      return Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          for (int i = 0;
-                              i <
-                                  Provider.of<StateData>(context)
-                                      .dil["burclistesi"]
-                                      .length;
-                              i++)
-                            Card(
-                              child: Row(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text(
-                                        Provider.of<StateData>(context)
-                                            .dil["burclistesi"][i]["adi"],
-                                        style: const TextStyle(
-                                            color: Colors.white)),
-                                  ),
-                                  const Spacer(),
-                                  const Icon(
-                                    color: Colors.white,
-                                    Icons.keyboard_arrow_right_outlined,
-                                    size: 24.0,
-                                  )
-                                ],
-                              ),
-                            )
-                        ],
-                      );
-                    });
-              },
-              child: Container(
-                padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
-                child: Row(
-                  children: const [
-                    Text(
-                      'Burcunuzu Seçin',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600, letterSpacing: 0.6),
-                    ),
-                    Spacer(),
-                    Text(
-                      'Aslan',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600, letterSpacing: 0.6),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Icon(
-                      Icons.keyboard_arrow_right_outlined,
-                      size: 24.0,
-                    )
-                  ],
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
+            
+           
             ElevatedButton(
               onPressed: () {
                 showModalBottomSheet(

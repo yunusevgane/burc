@@ -1,4 +1,4 @@
-package com.shemaster.yay
+package com.shemaster.akrep
 
 import io.flutter.embedding.android.FlutterActivity
 

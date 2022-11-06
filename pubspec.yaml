@@ -33,7 +33,6 @@ dependencies:
   flutter_local_notifications: ^9.1.4
   rxdart: ^0.27.5
 
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -53,27 +52,28 @@ flutter:
 
 flutter_native_splash:
   background_image: assets/bg.png
-  image: assets/icon.png
-  # branding: assets/zodcom.png
+  image: assets/burcicon/balik.png
+  # branding: assets/icon2.png
+  
   android_12:
-    image: assets/icon.png
     background_image: assets/bg.png
+    image: assets/burcicon/balik.png
 
 #flutter pub run flutter_native_splash:create
 
 flutter_app_name:
-  name: "Yay Burcu"
+  name: "Balık Burcu"
 
 flutter_icons:
   android: "logoicon"
   ios: true
-  image_path: "assets/burc/yay.jpg"
+  image_path: "assets/burc/balik.jpg"
 
-  # flutter pub run change_app_package_name:main com.shemaster.yay
+  # flutter pub run change_app_package_name:main com.shemaster.akrep
   # flutter pub run flutter_app_name
   # flutter pub run flutter_launcher_icons:main
-  # flutterfire configure
-  # flutter build appbundle --build-name=1.1.0 --build-number=1
+  # flutter pub run flutter_native_splash:create
+  # flutter build appbundle
 
   # sh1 alma
   # gradlew signingReport
