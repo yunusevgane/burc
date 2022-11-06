@@ -1,92 +1,62 @@
-name: demo
-on:
-  push:
-    branches:
-      - "main"
+name: CI
+
+on: push
+
+# on:
+#   pull_request:
+#     branches:
+#       - main
 
 jobs:
-  conditional_step:
-    runs-on: "ubuntu-20.04"
+  flutter_test:
+    name: Run flutter test and analyze
+    runs-on: ubuntu-latest
     steps:
-      - name: Create file
-        run: |
-          printf "Hello\nWorld\n" > hw.txt
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: "stable"
+      - run: flutter pub get
+      - run: flutter format .
+      - run: dart fix --dry-run
+      - run: dart fix --apply
 
-      - name: Create file
-      - shell: pwsh
-        run: |
-          echo First        > ././other.txt
-          echo Second Line >> other.txt
-          echo Third       >> other.txt
+      - run: flutter pub run change_app_package_name:main com.shemaster.akrep
+      - run: flutter pub run flutter_app_name
+      - run: flutter pub run flutter_launcher_icons:main
+      - run: flutter pub run flutter_native_splash:create
 
-        # - uses: actions/checkout@v2
-        #   with:
-        #     # Checkout as many commits as needed for the diff
-        #     fetch-depth: 2
-        # - shell: pwsh
-        #   run: php -r "file_exists('./pubspec.yaml') || copy('pubspec.yaml', 'pubspec2.yaml');"
+  # build_ios:
+  #   name: Build Flutter (iOS)
+  #   needs: [flutter_test]
+  #   runs-on: macos-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-java@v1
+  #       with:
+  #         java-version: "12.x"
+  #     - uses: subosito/flutter-action@v2
+  #       with:
+  #         channel: "stable"
+  #     - run: flutter pub get
+  #     - run: flutter clean
+  #     - run: flutter build ios --release --no-codesign
 
-        # run: |
-        #     echo "Copying $FILE"
-        #     cp -R ./pubspec.yaml ./pubspec2.yaml
-
-# name: CI
-
-# 07.11.20222
-# on: push
-
-# # on:
-# #   pull_request:
-# #     branches:
-# #       - main
-
-# jobs:
-#   flutter_test:
-#     name: Run flutter test and analyze
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#       - uses: actions/setup-java@v1
-#         with:
-#           java-version: "12.x"
-#       - uses: subosito/flutter-action@v1
-#         with:
-#           channel: "stable"
-#       - run: flutter pub get
-#       - run: flutter format .
-#       - run: dart fix --dry-run
-#       - run: dart fix --apply
-#       # - run: flutter analyze
-#       - run: flutter test
-
-#   build_ios:
-#     name: Build Flutter (iOS)
-#     needs: [flutter_test]
-#     runs-on: macos-latest
-#     steps:
-#       - uses: actions/checkout@v3
-#       - uses: actions/setup-java@v1
-#         with:
-#           java-version: "12.x"
-#       - uses: subosito/flutter-action@v2
-#         with:
-#           channel: "stable"
-#       - run: flutter pub get
-#       - run: flutter clean
-#       - run: flutter build ios --release --no-codesign
-
-#   build_appbundle:
-#     name: Build Flutter (Android)
-#     needs: [flutter_test]
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#       - uses: actions/setup-java@v1
-#         with:
-#           java-version: "12.x"
-#       - uses: subosito/flutter-action@v1
-#         with:
-#           channel: "stable"
-#       - run: flutter pub get
-#       - run: flutter clean
-#       - run: flutter build appbundle
+  build_appbundle:
+    name: Build Flutter (Android)
+    needs: [flutter_test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: "stable"
+      - run: flutter pub get
+      - run: flutter clean
+      - run: flutter build appbundle
