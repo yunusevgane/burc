@@ -1,5 +1,5 @@
 name: copy files
-on: [push]
+on: push
 jobs:
   build:
     name: Build
