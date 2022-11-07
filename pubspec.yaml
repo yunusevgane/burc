@@ -52,38 +52,39 @@ flutter:
 
 flutter_native_splash:
   background_image: assets/bg.png
-  image: assets/burcicon/balik.png
+  image: assets/burcicon/akrep.png
   # branding: assets/icon2.png
-  
+
   android_12:
     background_image: assets/bg.png
-    image: assets/burcicon/balik.png
+    image: assets/burcicon/akrep.png
 
 #flutter pub run flutter_native_splash:create
 
 flutter_app_name:
-  name: "Günlük Yorum"
+  name: "akrep Yorum"
 
 flutter_icons:
   android: "logoicon"
   ios: true
-  image_path: "assets/burc/balik.jpg"
+  image_path: "assets/burc/akrep.jpg"
+######--akrep--######
 
-  # flutter pub run change_app_package_name:main com.shemaster.akrep
-  # flutter pub run flutter_app_name
-  # flutter pub run flutter_launcher_icons:main
-  # flutter pub run flutter_native_splash:create
-  # flutter build appbundle
+# flutter pub run change_app_package_name:main com.shemaster.akrep
+# flutter pub run flutter_app_name
+# flutter pub run flutter_launcher_icons:main
+# flutter pub run flutter_native_splash:create
+# flutter build appbundle
 
-  # sh1 alma
-  # gradlew signingReport
-  # keytool -list -v -keystore "C:\Users\yunus\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+# sh1 alma
+# gradlew signingReport
+# keytool -list -v -keystore "C:\Users\yunus\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
 
-  #firebase
-  #flutter pub add firebase_core
-  #dart pub global activate flutterfire_cli
-  #flutterfire configure
-  #flutter run -v
+#firebase
+#flutter pub add firebase_core
+#dart pub global activate flutterfire_cli
+#flutterfire configure
+#flutter run -v
 #-------------------------
 # flutter build apk --split-per-abi
 
@@ -93,6 +94,17 @@ flutter_icons:
 # flutter pub outdated --mode=null-safety
 # flutter pub upgrade --null-safety
 # dart migrate
+
+
+
+
+
+
+
+
+
+
+
 
 
 
