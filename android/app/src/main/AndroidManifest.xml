@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.shemaster.akrep">
+    package="com.shemaster.aslan">
    <application
         android:label="Günlük Yorum"
         android:name="${applicationName}"
