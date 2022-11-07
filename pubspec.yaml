@@ -62,7 +62,7 @@ flutter_native_splash:
 #flutter pub run flutter_native_splash:create
 
 flutter_app_name:
-  name: "Balık Burcu"
+  name: "Günlük Yorum"
 
 flutter_icons:
   android: "logoicon"
@@ -93,3 +93,9 @@ flutter_icons:
 # flutter pub outdated --mode=null-safety
 # flutter pub upgrade --null-safety
 # dart migrate
+
+
+
+
+
+
